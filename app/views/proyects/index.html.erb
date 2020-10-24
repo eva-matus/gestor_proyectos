@@ -1,0 +1,10 @@
+<ul>
+<%= form_with(model: @proyect, url: proyects_index_path, local:true) do |f| %>
+<li><%= f.text_field :name %></li>
+<li><%= f.text_area :description%></li>
+<li><%= f.date_select :start_on %></li>
+<li><%= f.date_select :end_on %></li>
+<li><%= f.select :state, @states, {include_blank: true} %></li>
+<li><%= f.submit %></li>
+<% end %>
+</ul>

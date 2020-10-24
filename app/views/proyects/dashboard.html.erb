@@ -1,0 +1,17 @@
+<form>
+<select name = "state">
+    <option value = >:)</option>
+    <option value = 0 >Propuesta</option>
+    <option value = 1 >En progreso</option>
+    <option value = 2 >Termino</option>
+</select>
+<button type = "submit"> Buscar</button>
+</form>
+
+<% @proyects.each do |p| %>
+    <%= p.name %>
+    <%= p.description %>
+    <%= p.start_on %>
+    <%= p.end_on %>
+    <%= p.state %>
+<% end %>
